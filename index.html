@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="/lib/css/fontset.css">
+    <title>MQ Core</title>
+  </head>
+  <body>
+    <div id="main-wrapper" class="mainwrapper">
+      <div id="header-container" class="header"></div>
+      <div id="main-container" class="maincontainer"></div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      var socket = io.connect();
+
+      var container;
+
+      $( document ).ready(function() {
+
+        container = $( '#main-container' );
+        console.log("--> "+container+". Type: "+typeof(container));
+
+        socket.on('init', function(data) {
+          console.log("P1 - socket init");
+          addItem("<div class'listitem'>"+data.message.toString()+"</div>")
+          socket.emit('init_callback', { status: 'success' });
+        });
+
+        function addItem(item){
+          var con = document.createElement('div');
+          con.className = "listitem";
+          var inner = item
+          con.innerHTML = inner
+          document.getElementById("main-container").appendChild(con);
+        }
+
+        socket.on('add_message', function(data) {
+          console.log("P1 - message received");
+          addItem("<div class'listitem'> -> "+data.message.toString()+"</div>");
+        });
+      });
+    </script>
+  </body>
+</html>

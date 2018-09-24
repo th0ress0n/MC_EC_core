@@ -1,0 +1,198 @@
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+body {
+	/*text-align: center;*/
+	background-color: #000F4C;
+	margin:0px;
+	color: #E8FFFD;
+	font-family: 'VWHeadlineOTSemibold';
+    font-style: normal;
+  	font-weight: 300;
+  	letter-spacing:0.2px;
+  	line-height: 0.7;
+	font-size: 7px;
+	font-size: 0.7rem;
+	color: #E8FFFD!important;
+	margin-bottom: -0.2em;
+	margin-top: -0.1em;
+	text-align: left;
+}
+
+p {
+	font-family: 'Transat Text Standard', Helvetica, Arial, Sans-Serif;
+	-moz-font-feature-settings:'c2sc=0,case=0,dnom=0,frac=0,liga=0,lnum=0,numr=0,onum=0,pnum=0,salt=0,smcp=0,ss01=0,subs=0,sups=0,tnum=0';
+	line-height: 1;
+	margin-bottom: 0.6em;
+	margin-top: 0.6em;
+	font-size: 14px;
+	font-size: 1.4rem;
+	color: #E8FFFD!important;
+}
+
+h1{
+	font-family: 'VWHeadlineOTBlack';
+	-moz-font-feature-settings:'c2sc=0,case=0,dnom=0,frac=0,liga=0,lnum=0,numr=0,onum=0,pnum=0,salt=0,smcp=0,ss01=0,subs=0,sups=0,tnum=0';
+	letter-spacing:0.3px;
+	font-size: 11px;
+	font-size: 1.1rem;
+	font-weight: normal;
+	color: #E8FFFD!important;
+	line-height: 1;
+	margin-bottom: 0.2em;
+	margin-top: -0.1em;
+	text-align: left;
+}
+
+h2{
+	font-family: 'Transat Text Bold', Helvetica, Arial, Sans-Serif;
+	-moz-font-feature-settings:'c2sc=0,case=0,dnom=0,frac=0,liga=0,lnum=0,numr=0,onum=0,pnum=0,salt=0,smcp=0,ss01=0,subs=0,sups=0,tnum=0';
+	letter-spacing:-0.7px;
+	font-weight: bold;
+	font-size: 20px;
+	font-size: 2rem;
+	color: #E8FFFD!important;
+	text-transform:uppercase;
+}
+
+h3{
+	font-family: 'Transat Text Bold', Helvetica, Arial, Sans-Serif;
+	-moz-font-feature-settings:'c2sc=0,case=0,dnom=0,frac=0,liga=0,lnum=0,numr=0,onum=0,pnum=0,salt=0,smcp=0,ss01=0,subs=0,sups=0,tnum=0';
+	letter-spacing:-0.7px;
+	font-weight: bold;
+	font-size: 20px;
+	font-size: 2rem;
+	color: #E8FFFD!important;
+	text-transform:uppercase;
+}
+
+h4{
+	font-family: 'VWHeadlineOTSemibold';
+    font-style: normal;
+  	font-weight: 300;
+  	letter-spacing:0.2px;
+  	line-height: 0.7;
+	font-size: 7px;
+	font-size: 0.7rem;
+	color: #E8FFFD!important;
+	margin-bottom: -0.2em;
+	margin-top: -0.1em;
+	text-align: left;
+}
+
+h5{
+	font-family: 'VWHeadlineOTSemibold';
+    font-style: normal;
+  	font-weight: 300;
+  	letter-spacing:0.2px;
+  	line-height: 1;
+	font-size: 10px;
+	font-size: 1.0rem;
+	color: #E8FFFD!important;
+	margin-bottom: -0.3em;
+	margin-top: 0.3em;
+	text-align: left;
+}
+
+.headers{
+	font-family: 'VWHeadlineOTSemibold';
+    font-style: normal;
+  	font-weight: 500;
+  	letter-spacing:0.2px;
+  	line-height: 1;
+	font-size: 15px;
+	font-size: 1.5rem;
+	color: #E8FFFD!important;
+	margin-bottom: -0.3em;
+	margin-top: 0.3em;
+	text-align: left;
+}
+
+a, a:visited {
+	font-weight: bold;
+	text-shadow: none;
+	text-decoration:none;
+}
+
+
+
+.fw{
+	width:100%;
+	height:auto;
+}
+
+
+/*
+
+*/
+#main-wrapper{}
+.mainwrapper{
+	margin-left: auto;
+	margin-right: auto;
+	width:100%;
+	max-width: 960px;
+}
+
+
+#header-container{
+
+}
+.header{
+	width: 100%;
+    height: 85px;
+}
+
+#footer{}
+.footer-container{
+
+}
+
+.bankcontainer{
+	display: inline-block;
+}
+
+.bankitem{
+	float:left;
+	display: inline-block;
+	width:25%;
+}
+
+#wrapper{}
+.wrapper{
+	padding: 5%;
+    border-style: dotted;
+    border-width: 0.5px;
+    margin-right: 5.5%;
+    border-radius: 10px;
+    margin-bottom: 5.5%;
+}
+
+
+#title{}
+.title{
+	float: left;
+    font-size: 140%;
+    position: relative;
+    top: 38px;
+    margin-left: 10px;
+}
+
+
+.listitem{
+	height: 7px;
+	font-family: 'Transat Text Standard', Helvetica, Arial, Sans-Serif;
+	-moz-font-feature-settings:'c2sc=0,case=0,dnom=0,frac=0,liga=0,lnum=0,numr=0,onum=0,pnum=0,salt=0,smcp=0,ss01=0,subs=0,sups=0,tnum=0';
+	line-height: 1;
+	margin-bottom: 0.6em;
+	margin-top: 0.6em;
+	font-size: 11px;
+	color: #E8FFFD!important;
+	font-weight: 100;
+}
+
+
+
+
