@@ -34,9 +34,9 @@ io.on('connection', function (socket) {
 var rabbitmq = new RabbitMQ('amqp://0.0.0.0');
 
 rabbitmq.on('message', function(channel, message) {
-  console.log("Core "+message.toString());
+  console.log("Core : channel: "+channel+" -> Message: "+message.toString());
   io.sockets.volatile.emit('add_message', { message: message.toString() } );
-  rabbitmq.publish(queues.XPKIT_ANALYTICS, {message: 'Core received '+message+' on channel '+channel});
+  rabbitmq.publish(queues.XPKIT_ANALYTICS, {message: 'Core received '+message.toString()+' on channel '+channel.toString()});
 });
 
 rabbitmq.on('error', function(err) {
@@ -49,9 +49,9 @@ rabbitmq.on('logs', function(print_log) {
 
 
 function intervalFunc() {
-	console.log("interval tick ");
-	io.sockets.volatile.emit('add_message', { message: "Interval tick" } );
-  	rabbitmq.publish(queues.SCREEN_CORE, {message: 'tick'});
+  console.log("interval tick ");
+  io.sockets.volatile.emit('add_message', { message: "Interval tick" } );
+  rabbitmq.publish(queues.SCREEN_CORE, {message: 'tick'});
 }
 
 setInterval(intervalFunc, 2000);
